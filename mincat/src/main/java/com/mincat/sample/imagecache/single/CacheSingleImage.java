@@ -63,7 +63,12 @@ public class CacheSingleImage {
                             L.i(TAG, "cache  single image success:" + "editor.commit()");
                             editor.commit();
                         } else {
-                            editor.abort();
+                            try {
+                                editor.abort();
+                            } catch (Exception e) {
+                                L.i(TAG, "cache single image  failed:" + " editor.abort()");
+                            }
+
                             L.i(TAG, "cache single image  failed:" + " editor.abort()");
                         }
                     }
