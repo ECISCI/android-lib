@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mincat.test">
+
+    <!-- Required -->
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+    <application
+        android:name="com.mincat.sample.app.MyApp"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.Slide">
+        <activity
+            android:name=".testui.MainAct"
+            android:theme="@style/ActivityThemeCrossPublicMaterial">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".testui.xutils.XutilsPost"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityThemeCrossPublicMaterial" />
+        <activity
+            android:name=".testui.xutils.XutilsGet"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityThemeCrossPublicMaterial" />
+        <activity
+            android:name=".testui.volley.VolleyGet"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityThemeCrossPublicMaterial" />
+        <activity
+            android:name=".testui.hellochart.HelloChartLine"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityThemeCrossPublicMaterial" />
+        <activity
+            android:name=".testui.video.VideoPlay"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityThemeCrossPublicMaterial" />
+        <activity
+            android:name=".testui.volley.VolleyPost"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityThemeCrossPublicMaterial" />
+        <activity
+            android:name=".testui.hellochart.HelloChartColumn"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityThemeCrossPublicMaterial" />
+        <activity
+            android:name=".testui.hellochart.HelloChartCircle"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityThemeCrossPublicMaterial" />
+        <activity
+            android:name=".testui.NetAct"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityThemeCrossPublicMaterial" />
+        <activity
+            android:name=".testui.ChartsAct"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityThemeCrossPublicMaterial" />
+        <activity
+            android:name=".testui.db.Database"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityThemeCrossPublicMaterial" />
+        <activity
+            android:name=".testui.VideoAct"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityThemeCrossPublicMaterial" />
+        <activity
+            android:name=".testui.imagecache.CacheSingleImages"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityThemeCrossPublicMaterial" />
+        <activity
+            android:name=".testui.ImageCacheAct"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityThemeCrossPublicMaterial" />
+        <activity
+            android:name=".testui.imagecache.CacheMoreImage"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityThemeCrossPublicMaterial" />
+        <activity
+            android:name=".testui.DbAndImageCache"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityThemeCrossPublicMaterial" />
+        <activity
+            android:name=".testui.imagecache.DbAndImageCacheLoad"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityThemeCrossPublicMaterial" />
+        <activity
+            android:name=".testui.imagecache.DbAndImageCacheLocal"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityThemeCrossPublicMaterial" />
+        <activity
+            android:name=".testui.TestAnnotation"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityThemeCrossPublicMaterial" />
+    </application>
+
+</manifest>

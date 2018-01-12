@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_twenty"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_ten">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_one_hundred_fifty"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_ten"
+            android:gravity="center"
+            android:textColor="@color/main_text_color"
+            android:textSize="@dimen/text_size_eighteen"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/margin_ten"
+            android:layout_marginTop="@dimen/margin_ten">
+
+            <Button
+                android:id="@+id/confirm"
+                android:layout_width="@dimen/margin_zero"
+                android:layout_height="@dimen/public_high"
+                android:layout_marginRight="@dimen/margin_five"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="确定"
+                android:textColor="@color/main_text_color"
+                android:textSize="@dimen/text_size_sixteen" />
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="@dimen/margin_zero"
+                android:layout_height="@dimen/public_high"
+                android:layout_marginLeft="@dimen/margin_five"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="取消"
+                android:textColor="@color/main_text_color"
+                android:textSize="@dimen/text_size_sixteen" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

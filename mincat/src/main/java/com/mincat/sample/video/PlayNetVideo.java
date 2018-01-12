@@ -1,0 +1,36 @@
+package com.mincat.sample.video;
+
+import android.content.Context;
+
+import com.bumptech.glide.Glide;
+
+import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
+import fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard;
+
+/**
+ * @author Mings
+ * @描述 播放网络视频
+ */
+
+public class PlayNetVideo {
+
+    // 禁止创建此类对象
+    private PlayNetVideo() {
+    }
+
+    /**
+     * @param context  上下文对象
+     * @param player   JCVideoPlayerStandard对象
+     * @param videoUrl 网路视频url地址
+     * @param imageUrl 视频默认加载图片url地址
+     */
+    public static void playNetVideo(Context context, JCVideoPlayerStandard player, String videoUrl, String imageUrl) {
+
+        boolean setUp = player.setUp(videoUrl, JCVideoPlayer.SCREEN_LAYOUT_LIST, "");
+        if (setUp) {
+            Glide.with(context).load(imageUrl).into(player.thumbImageView);
+        }
+
+
+    }
+}

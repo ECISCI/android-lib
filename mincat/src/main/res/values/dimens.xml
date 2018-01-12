@@ -1,0 +1,57 @@
+<resources>
+
+    <!--文本文字大小-->
+    <dimen name="text_size_nine">9sp</dimen>
+    <dimen name="text_size_twelve">12sp</dimen>
+    <dimen name="text_size_fourteen">14sp</dimen>
+    <dimen name="text_size_sixteen">16sp</dimen>
+    <dimen name="text_size_eighteen">18sp</dimen>
+    <dimen name="text_size_twenty">20sp</dimen>
+    <dimen name="text_size_twenty_two">22sp</dimen>
+
+
+    <!--边距大小-->
+    <dimen name="margin_zero_point_five">0.5dp</dimen>
+    <dimen name="margin_zero">0dp</dimen>
+    <dimen name="margin_one">1dp</dimen>
+    <dimen name="margin_two">2dp</dimen>
+    <dimen name="margin_five">5dp</dimen>
+    <dimen name="margin_ten">10dp</dimen>
+    <dimen name="margin_twelve">12dp</dimen>
+    <dimen name="margin_fifteen">15dp</dimen>
+    <dimen name="margin_eighteen">18dp</dimen>
+    <dimen name="margin_twenty">20dp</dimen>
+    <dimen name="margin_twenty_two">22dp</dimen>
+    <dimen name="margin_twenty_five">25dp</dimen>
+    <dimen name="margin_thirty">30dp</dimen>
+    <dimen name="margin_thirty_five">35dp</dimen>
+    <dimen name="margin_fifty">50dp</dimen>
+    <dimen name="margin_fifty_five">55dp</dimen>
+    <dimen name="margin_sixty">60dp</dimen>
+    <dimen name="margin_sixty_five">65dp</dimen>
+    <dimen name="margin_seventy">70dp</dimen>
+    <dimen name="margin_seventy_five">75dp</dimen>
+    <dimen name="margin_eighty">80dp</dimen>
+    <dimen name="margin_ninety">90dp</dimen>
+    <dimen name="margin_one_hundred">100dp</dimen>
+    <dimen name="margin_one_hundred_ten">110dp</dimen>
+    <dimen name="margin_one_hundred_twenty">120dp</dimen>
+    <dimen name="margin_one_hundred_thirty">130dp</dimen>
+    <dimen name="margin_one_hundred_forty">140dp</dimen>
+    <dimen name="margin_one_hundred_sixty">160dp</dimen>
+    <dimen name="margin_one_hundred_fifty">150dp</dimen>
+    <dimen name="margin_one_hundred_eighty">180dp</dimen>
+    <dimen name="margin_one_hundred_ninety">190dp</dimen>
+    <dimen name="margin_two_hundred">200dp</dimen>
+    <dimen name="margin_two_hundred_twenty">220dp</dimen>
+    <dimen name="margin_two_hundred_thirty">230dp</dimen>
+    <dimen name="margin_two_hundred_fifty">250dp</dimen>
+    <dimen name="margin_three_hundred">300dp</dimen>
+    <dimen name="margin_six_hundred">600dp</dimen>
+
+
+    <!--公用的边距大小-->
+    <dimen name="public_forty">40dp</dimen>
+    <dimen name="public_high">44dp</dimen>
+
+</resources>

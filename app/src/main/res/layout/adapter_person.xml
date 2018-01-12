@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/question_lists_lot"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_one_hundred"
+    android:layout_marginTop="@dimen/margin_ten"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl_01"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_one_hundred">
+
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="@dimen/margin_sixty"
+            android:layout_height="@dimen/margin_sixty"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_ten"
+            android:background="@drawable/bg" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_ten"
+            android:layout_toRightOf="@id/item_image"
+            android:text="刚刚"
+            android:textColor="@color/md_blue_700"
+            android:textSize="@dimen/text_size_sixteen" />
+
+        <TextView
+            android:id="@+id/tv_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_ten"
+            android:layout_toRightOf="@id/tv_username"
+            android:text="男"
+            android:textColor="@color/md_blue_700"
+            android:textSize="@dimen/text_size_sixteen" />
+
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_ten"
+            android:layout_toRightOf="@id/tv_sex"
+            android:text="11"
+            android:textColor="@color/md_blue_700"
+            android:textSize="@dimen/text_size_sixteen" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

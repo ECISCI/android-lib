@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_shallow"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/AppCompat_toolbar"
+        android:elevation="4dp"
+        android:minHeight="@dimen/public_high"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:transitionName="actionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/AppCompat_toolbar_text"
+            android:text="Volley Get 请求" />
+
+        <ImageButton
+            android:id="@+id/refresh"
+            android:layout_width="@dimen/margin_twenty"
+            android:layout_height="@dimen/margin_twenty"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginLeft="@dimen/margin_ten"
+            android:layout_marginRight="@dimen/margin_ten"
+            android:background="@null"
+            android:src="@drawable/icon_refresh"
+            android:visibility="gone" />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_three_hundred"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/white">
+
+        <EditText
+            android:id="@+id/et_show_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_three_hundred"
+            android:background="@null"
+            android:focusable="false"
+            android:gravity="center"
+            android:textColor="@color/main"
+            android:textSize="@dimen/text_size_sixteen" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_send"
+        style="@style/test_button"
+        android:text="发送请求" />
+
+</RelativeLayout>
