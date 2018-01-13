@@ -43,7 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/public_high"
             android:layout_margin="@dimen/margin_ten"
-            android:background="@drawable/corners_test_button"
+            android:background="@drawable/corners_bg_white"
             android:text="缓存单张图片"
             android:textAllCaps="false"
             android:textColor="@color/white" />
@@ -52,7 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/public_high"
             android:layout_margin="@dimen/margin_ten"
-            android:background="@drawable/corners_test_button"
+            android:background="@drawable/corners_bg_white"
             android:text="缓存列表图片"
             android:textAllCaps="false"
             android:textColor="@color/white" />

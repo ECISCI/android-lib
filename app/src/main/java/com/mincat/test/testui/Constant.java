@@ -7,13 +7,21 @@ package com.mincat.test.testui;
 
 public class Constant {
 
+    /**
+     * 测试请求地址 Get
+     *
+     * @param cityEncode 城市编码
+     * @return
+     */
     public static String getJuHeWeather(String cityEncode) {
 
         return "http://op.juhe.cn/onebox/weather/query?cityname=" + cityEncode + "&key=bf5e0ec5c949eb84ca3e4ee2c37b541e";
 
     }
 
-    // 请求地址
+    /**
+     * 请求地址 post
+     */
     public static final String BASE_URL = "https://www.horus.net.cn/ucenter/api";
 
     public static final String LOGIN = BASE_URL + "/login";

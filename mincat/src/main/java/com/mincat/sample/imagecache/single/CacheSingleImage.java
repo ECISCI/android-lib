@@ -7,6 +7,7 @@ import com.mincat.sample.imagecache.utils.CreateDiskLruCache;
 import com.mincat.sample.imagecache.utils.DownLoadImage;
 import com.mincat.sample.imagecache.utils.ImageUrlMd5;
 import com.mincat.sample.utils.L;
+import com.mincat.sample.utils.T;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -60,22 +61,22 @@ public class CacheSingleImage {
                         outputStream = editor.newOutputStream(0);
 
                         if (DownLoadImage.downLoadImage(imageUrl, outputStream)) {
-                            L.i(TAG, "cache  single image success:" + "editor.commit()");
+                            L.i(TAG, "图片缓存成功:" + "editor.commit()");
                             editor.commit();
                         } else {
                             try {
                                 editor.abort();
                             } catch (Exception e) {
-                                L.i(TAG, "cache single image  failed:" + " editor.abort()");
+                                L.i(TAG, "图片缓存失败:" + " editor.abort()");
                             }
 
-                            L.i(TAG, "cache single image  failed:" + " editor.abort()");
+                            L.i(TAG, "图片缓存失败:" + " editor.abort()");
                         }
                     }
                     diskLruCache.flush();
                 } catch (IOException e) {
                     e.printStackTrace();
-                    L.i(TAG, "cache  single image failed:" + e);
+                    L.i(TAG, "图片缓存失败" + e);
                 }
             }
         }).start();

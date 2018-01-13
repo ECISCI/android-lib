@@ -22,10 +22,6 @@ public class TestAnnotation extends AppCompat {
 
     @BindView(R.id.click_01)
     Button click01;
-    @BindView(R.id.click_02)
-    Button click02;
-    @BindView(R.id.click_03)
-    Button click03;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -54,17 +50,12 @@ public class TestAnnotation extends AppCompat {
 
     }
 
-    @OnClick({R.id.click_01, R.id.click_02, R.id.click_03})
+    @OnClick({R.id.click_01})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.click_01:
-                T.showShort(getApplicationContext(),"1");
-                break;
-            case R.id.click_02:
-                T.showShort(getApplicationContext(),"2");
-                break;
-            case R.id.click_03:
-                T.showShort(getApplicationContext(),"3");
+                T.showShort(getApplicationContext(), "我是注解点击测试");
+
                 break;
         }
     }

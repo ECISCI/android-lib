@@ -18,7 +18,7 @@
         <TextView
             android:id="@+id/title"
             style="@style/AppCompat_toolbar_text"
-            android:text="图片缓存+数据库" />
+            android:text="列表缓存" />
 
         <Button
             android:id="@+id/refresh"
@@ -33,13 +33,42 @@
             android:visibility="gone" />
     </android.support.v7.widget.Toolbar>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin_ten"
+        android:gravity="center"
+        android:text="@string/cache_describe"
+        android:textColor="@color/md_red_600"
+        android:textSize="@dimen/text_size_fourteen" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin_ten"
+        android:gravity="center"
+        android:text="@string/sd_card_path"
+        android:textColor="@color/md_red_600"
+        android:textSize="@dimen/text_size_fourteen" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin_ten"
+        android:gravity="center"
+        android:text="@string/no_sdcard_path"
+        android:textColor="@color/md_red_600"
+        android:textSize="@dimen/text_size_fourteen" />
 
     <Button
         android:id="@+id/read_net"
         android:layout_width="match_parent"
         android:layout_height="@dimen/public_high"
         android:layout_margin="@dimen/margin_ten"
-        android:background="@drawable/corners_test_button"
+        android:background="@drawable/corners_bg_white"
         android:text="读网络"
         android:textAllCaps="false"
         android:textColor="@color/white" />
@@ -49,7 +78,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/public_high"
         android:layout_margin="@dimen/margin_ten"
-        android:background="@drawable/corners_test_button"
+        android:background="@drawable/corners_bg_white"
         android:text="读本地"
         android:textAllCaps="false"
         android:textColor="@color/white" />
@@ -59,8 +88,8 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/public_high"
         android:layout_margin="@dimen/margin_ten"
-        android:background="@drawable/corners_test_button"
-        android:text="删除数据库和图片缓存"
+        android:background="@drawable/corners_bg_white"
+        android:text="删除全部缓存"
         android:textAllCaps="false"
         android:textColor="@color/white" />
 

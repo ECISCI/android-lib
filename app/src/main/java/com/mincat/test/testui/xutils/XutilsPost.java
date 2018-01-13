@@ -5,12 +5,16 @@ import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.mincat.sample.manager.post.BaseXutilsPost;
 import com.mincat.sample.utils.L;
 import com.mincat.test.R;
 import com.mincat.test.domain.User;
 import com.mincat.test.testui.Constant;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * @author Mings
@@ -19,6 +23,8 @@ import com.mincat.test.testui.Constant;
 
 public class XutilsPost extends BaseXutilsPost {
 
+    @BindView(R.id.progress)
+    TextView progress;
     private Button btn;
     private EditText et_show_text;
 
@@ -36,6 +42,7 @@ public class XutilsPost extends BaseXutilsPost {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_test_xutils_post);
+        ButterKnife.bind(this);
         initView();
     }
 
@@ -61,6 +68,7 @@ public class XutilsPost extends BaseXutilsPost {
 
             case R.id.btn_send:
 
+                progress.setText("请求中...请稍后");
                 onNetRequest();
 
                 break;
@@ -89,6 +97,8 @@ public class XutilsPost extends BaseXutilsPost {
     @Override
     public void onSuccessListener(String result, boolean hasDialog, String sign) {
 
+        progress.setText(R.string.request_success);
+
         if (hasDialog) {
             // 在此处做关闭进度条操作
         }
@@ -112,7 +122,7 @@ public class XutilsPost extends BaseXutilsPost {
     @Override
     public void onErrorListener(Throwable arg0, boolean arg1, boolean hasDialog, String sign) {
 
-
+        progress.setText(R.string.request_failed);
         et_show_text.setText("请求失败,错误信息请查看Log日志");
         L.i(TAG, "错误信息:" + arg0);
 

@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.android.volley.VolleyError;
 import com.mincat.sample.manager.get.BaseVolleyGet;
@@ -14,6 +15,9 @@ import com.mincat.test.testui.Constant;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * @author Mings
  * @描述 测试Volley Get请求
@@ -21,6 +25,8 @@ import java.net.URLEncoder;
 
 public class VolleyGet extends BaseVolleyGet {
 
+    @BindView(R.id.progress)
+    TextView progress;
     private Button btn_send;
     private EditText et_show_text;
     private String urlEncode;
@@ -33,6 +39,7 @@ public class VolleyGet extends BaseVolleyGet {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_test_volley_get);
+        ButterKnife.bind(this);
         initView();
     }
 
@@ -53,6 +60,8 @@ public class VolleyGet extends BaseVolleyGet {
 
         switch (view.getId()) {
             case R.id.btn_send:
+
+                progress.setText(R.string.in_requst);
                 onNetRequest();
 
                 break;
@@ -93,7 +102,7 @@ public class VolleyGet extends BaseVolleyGet {
      */
     @Override
     public void onHandleResponsePost(String response, String sign) {
-
+        progress.setText(R.string.request_success);
         if (sign.equals(requestSign)) {
 
             et_show_text.setText("请求成功,具体返回结果集请查看Log日志");
@@ -110,7 +119,7 @@ public class VolleyGet extends BaseVolleyGet {
      */
     @Override
     public void errorListener(VolleyError error, String sign) {
-
+        progress.setText(R.string.request_failed);
         if (sign.equals(requestSign)) {
             et_show_text.setText("Xutils Get 请求失败,具体错误信息请查看Log日志");
         }

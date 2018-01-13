@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout style="@style/rl_title_public">
+
+                <View
+                    android:id="@+id/vertical_line"
+                    style="@style/rl_tv_title_view_vertical_line"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/margin_five" />
+
+                <View style="@style/view_horizontal_line" />
+
+                <TextView
+                    style="@style/rl_tv_title_public_main"
+                    android:layout_toRightOf="@id/vertical_line"
+                    android:text="图形展示" />
+
+            </RelativeLayout>
+
+            <View style="@style/view_horizontal_line" />
+
+            <LinearLayout style="@style/linear_contain_public">
+
+                <RelativeLayout
+                    android:id="@+id/line_chart"
+                    style="@style/linear_contain_public_rl">
+
+                    <TextView
+                        style="@style/tv_main"
+                        android:layout_centerInParent="true"
+                        android:text="折线图" />
+                </RelativeLayout>
+
+                <View style="@style/view_vertical_line" />
+
+                <RelativeLayout
+                    android:id="@+id/column_chart"
+                    style="@style/linear_contain_public_rl">
+
+
+                    <TextView
+                        style="@style/tv_main"
+                        android:layout_centerInParent="true"
+                        android:text="柱状图" />
+
+
+                </RelativeLayout>
+
+                <View style="@style/view_vertical_line" />
+
+                <RelativeLayout
+                    android:id="@+id/circle_chart"
+                    style="@style/linear_contain_public_rl">
+
+                    <TextView
+                        style="@style/tv_main"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="饼状图" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View style="@style/view_horizontal_line" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

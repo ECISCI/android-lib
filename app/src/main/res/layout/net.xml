@@ -51,7 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/public_high"
                 android:layout_margin="@dimen/margin_ten"
-                android:background="@drawable/corners_test_button"
+                android:background="@drawable/corners_bg_white"
                 android:text="Xutils Post 请求"
                 android:textAllCaps="false"
                 android:textColor="@color/white" />
@@ -61,7 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/public_high"
                 android:layout_margin="@dimen/margin_ten"
-                android:background="@drawable/corners_test_button"
+                android:background="@drawable/corners_bg_white"
                 android:text="Xutils Get 请求"
                 android:textAllCaps="false"
                 android:textColor="@color/white" />
@@ -71,7 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/public_high"
                 android:layout_margin="@dimen/margin_ten"
-                android:background="@drawable/corners_test_button"
+                android:background="@drawable/corners_bg_white"
                 android:text="Volley Post 请求"
                 android:textAllCaps="false"
                 android:textColor="@color/white" />
@@ -81,7 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/public_high"
                 android:layout_margin="@dimen/margin_ten"
-                android:background="@drawable/corners_test_button"
+                android:background="@drawable/corners_bg_white"
                 android:text="Volley Get 请求"
                 android:textAllCaps="false"
                 android:textColor="@color/white" />

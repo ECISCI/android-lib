@@ -34,6 +34,7 @@
     </android.support.v7.widget.Toolbar>
 
     <LinearLayout
+        android:id="@+id/rl_volley_get"
         android:layout_width="match_parent"
         android:layout_height="@dimen/margin_three_hundred"
         android:layout_alignParentLeft="true"
@@ -53,6 +54,11 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/progress"
+        style="@style/tv_main"
+        android:layout_below="@id/rl_volley_get"
+        android:layout_marginTop="@dimen/margin_ten" />
 
     <Button
         android:id="@+id/btn_send"

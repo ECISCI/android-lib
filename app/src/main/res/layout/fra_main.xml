@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/public_high"
+        android:background="@color/main">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="业务"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_eighteen" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout style="@style/rl_title_public">
+
+                <View
+                    android:id="@+id/vertical_line"
+                    style="@style/rl_tv_title_view_vertical_line"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/margin_five" />
+
+                <View style="@style/view_horizontal_line" />
+
+                <TextView
+                    style="@style/rl_tv_title_public_main"
+                    android:layout_toRightOf="@id/vertical_line"
+                    android:text="网络访问( *** 请求结果请查看Log日志 )" />
+
+            </RelativeLayout>
+
+            <View style="@style/view_horizontal_line" />
+
+            <LinearLayout style="@style/linear_contain_public">
+
+                <RelativeLayout
+                    android:id="@+id/rl_xutils_post"
+                    style="@style/linear_contain_public_rl">
+
+                    <TextView
+                        style="@style/tv_main"
+                        android:layout_centerInParent="true"
+                        android:text="Xutils Post" />
+                </RelativeLayout>
+
+                <View style="@style/view_vertical_line" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_xutils_get"
+                    style="@style/linear_contain_public_rl">
+
+
+                    <TextView
+                        style="@style/tv_main"
+                        android:layout_centerInParent="true"
+                        android:text="Xutils Get" />
+
+
+                </RelativeLayout>
+
+                <View style="@style/view_vertical_line" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_volley_get"
+                    style="@style/linear_contain_public_rl">
+
+                    <TextView
+                        style="@style/tv_main"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="Volley Get" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View style="@style/view_horizontal_line" />
+
+            <LinearLayout style="@style/linear_contain_public">
+
+                <RelativeLayout
+                    android:id="@+id/rl_volley_post"
+                    style="@style/linear_contain_public_rl">
+
+                    <TextView
+                        style="@style/tv_main"
+                        android:layout_centerInParent="true"
+                        android:text="Volley Post" />
+                </RelativeLayout>
+
+                <View style="@style/view_vertical_line" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_xutils_download"
+                    style="@style/linear_contain_public_rl">
+
+
+                    <TextView
+                        style="@style/tv_main"
+                        android:layout_centerInParent="true"
+                        android:text="Xutils Download" />
+
+
+                </RelativeLayout>
+
+                <View style="@style/view_vertical_line" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_xutils_upload"
+                    style="@style/linear_contain_public_rl">
+
+                    <TextView
+                        style="@style/tv_main"
+                        android:layout_centerInParent="true"
+                        android:text="Xutils upload" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View style="@style/view_horizontal_line" />
+
+            <RelativeLayout style="@style/rl_title_public">
+
+                <View
+                    android:id="@+id/db_vertical_line"
+                    style="@style/rl_tv_title_view_vertical_line"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/margin_five" />
+
+                <View style="@style/view_horizontal_line" />
+
+                <TextView
+                    style="@style/rl_tv_title_public_main"
+                    android:layout_toRightOf="@id/db_vertical_line"
+                    android:text="操作数据库( *** 操作结果请查看 Log日志 )" />
+
+            </RelativeLayout>
+
+            <View style="@style/view_horizontal_line" />
+
+            <LinearLayout style="@style/linear_contain_public">
+
+                <RelativeLayout
+                    android:id="@+id/rl_db_add_person"
+                    style="@style/linear_contain_public_rl">
+
+                    <TextView
+                        style="@style/tv_main"
+                        android:layout_centerInParent="true"
+                        android:text="add Person" />
+                </RelativeLayout>
+
+                <View style="@style/view_vertical_line" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_db_add_book"
+                    style="@style/linear_contain_public_rl">
+
+
+                    <TextView
+                        style="@style/tv_main"
+                        android:layout_centerInParent="true"
+                        android:text="add Book" />
+
+
+                </RelativeLayout>
+
+                <View style="@style/view_vertical_line" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_db_select_person"
+                    style="@style/linear_contain_public_rl">
+
+                    <TextView
+                        style="@style/tv_main"
+                        android:layout_centerInParent="true"
+                        android:text="select Person" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View style="@style/view_horizontal_line" />
+
+            <LinearLayout style="@style/linear_contain_public">
+
+                <RelativeLayout
+                    android:id="@+id/rl_db_select_book"
+                    style="@style/linear_contain_public_rl">
+
+                    <TextView
+                        style="@style/tv_main"
+                        android:layout_centerInParent="true"
+                        android:text="select Book" />
+                </RelativeLayout>
+
+                <View style="@style/view_vertical_line" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_db_delete_person"
+                    style="@style/linear_contain_public_rl">
+
+
+                    <TextView
+                        style="@style/tv_main"
+                        android:layout_centerInParent="true"
+                        android:text="delete Person" />
+
+
+                </RelativeLayout>
+
+                <View style="@style/view_vertical_line" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_db_delete_book"
+                    style="@style/linear_contain_public_rl">
+
+                    <TextView
+                        style="@style/tv_main"
+                        android:layout_centerInParent="true"
+                        android:text="delete Book" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View style="@style/view_horizontal_line" />
+
+            <RelativeLayout style="@style/rl_title_public">
+
+                <View
+                    android:id="@+id/cache_vertical_line"
+                    style="@style/rl_tv_title_view_vertical_line"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/margin_five" />
+
+                <View style="@style/view_horizontal_line" />
+
+                <TextView
+                    style="@style/rl_tv_title_public_main"
+                    android:layout_toRightOf="@id/cache_vertical_line"
+                    android:text="图片缓存" />
+
+            </RelativeLayout>
+
+            <View style="@style/view_horizontal_line" />
+
+            <LinearLayout style="@style/linear_contain_public">
+
+                <RelativeLayout
+                    android:id="@+id/cache_single_image"
+                    style="@style/linear_contain_public_rl">
+
+                    <TextView
+                        style="@style/tv_main"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="缓存单张" />
+                </RelativeLayout>
+
+                <View style="@style/view_vertical_line" />
+
+                <RelativeLayout
+                    android:id="@+id/cache_list"
+                    style="@style/linear_contain_public_rl">
+
+
+                    <TextView
+                        style="@style/tv_main"
+                        android:layout_centerInParent="true"
+                        android:text="缓存列表" />
+
+
+                </RelativeLayout>
+
+                <View style="@style/view_vertical_line" />
+
+                <RelativeLayout
+                    android:id="@+id/db_cache_image"
+                    style="@style/linear_contain_public_rl">
+
+                    <TextView
+                        style="@style/tv_main"
+                        android:layout_centerInParent="true"
+                        android:text="缓存数据+图片" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <View style="@style/view_horizontal_line" />
+
+            <LinearLayout style="@style/linear_contain_public">
+
+
+                <RelativeLayout
+                    android:id="@+id/delete_all"
+                    style="@style/linear_contain_public_rl">
+
+
+                    <TextView
+                        style="@style/tv_main"
+                        android:layout_centerInParent="true"
+                        android:text="删除全部缓存" />
+
+
+                </RelativeLayout>
+
+                <View style="@style/view_vertical_line" />
+
+                <RelativeLayout
+                    android:id="@+id/delete_cache_single_image"
+                    style="@style/linear_contain_public_rl">
+
+                    <TextView
+                        style="@style/tv_main"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="删除缓存单张"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View style="@style/view_vertical_line" />
+
+                <RelativeLayout
+                    style="@style/linear_contain_public_rl"
+                    android:visibility="invisible">
+
+                    <TextView
+                        style="@style/tv_main"
+                        android:layout_centerInParent="true"
+                        android:text="缓存数据+图片" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <View style="@style/view_horizontal_line" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

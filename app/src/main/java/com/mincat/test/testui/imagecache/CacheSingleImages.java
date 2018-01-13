@@ -3,15 +3,19 @@ package com.mincat.test.testui.imagecache;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import com.mincat.sample.imagecache.single.CacheSingleImage;
-import com.mincat.sample.imagecache.single.DisplaySingleImage;
 import com.mincat.sample.imagecache.single.DeleteSingleImage;
+import com.mincat.sample.imagecache.single.DisplaySingleImage;
 import com.mincat.sample.manager.base.AppCompat;
 import com.mincat.test.R;
 import com.mincat.test.testui.Constant;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * @author Ming
@@ -19,15 +23,21 @@ import com.mincat.test.testui.Constant;
  */
 
 public class CacheSingleImages extends AppCompat {
-    private com.mincat.sample.imagecache.single.CacheSingleImage cacheSingleImage = com.mincat.sample.imagecache.single.CacheSingleImage.getInstance();
+    @BindView(R.id.cache_single_image)
+    RelativeLayout cacheSingleImage;
+    @BindView(R.id.display_local_image)
+    RelativeLayout displayLocalImage;
+    @BindView(R.id.delete_cache)
+    RelativeLayout deleteCache;
+    private CacheSingleImage cache = CacheSingleImage.getInstance();
     private String imageUrl = Constant.CACHE_IMAGE_URL;
     private ImageView image;
-    private Button btn_image_cache, btn_display_image, btn_remove_image;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_imagecache_single);
+        ButterKnife.bind(this);
 
         initView();
     }
@@ -36,14 +46,6 @@ public class CacheSingleImages extends AppCompat {
     public void initView() {
         initToolBar(R.id.toolbar);
         image = getId(R.id.image);
-        btn_image_cache = getId(R.id.btn_image_cache);
-        btn_display_image = getId(R.id.btn_display_image);
-        btn_remove_image = getId(R.id.btn_remove_image);
-
-
-        btn_image_cache.setOnClickListener(this);
-        btn_display_image.setOnClickListener(this);
-        btn_remove_image.setOnClickListener(this);
 
 
     }
@@ -56,18 +58,22 @@ public class CacheSingleImages extends AppCompat {
     @Override
     public void onClick(View view) {
 
-        switch (view.getId()) {
 
-            case R.id.btn_image_cache:
-                cacheSingleImage.cache(this, imageUrl);
+    }
+
+    @OnClick({R.id.cache_single_image, R.id.display_local_image, R.id.delete_cache})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.cache_single_image:
+                cache.cache(this, imageUrl);
                 break;
-            case R.id.btn_display_image:
+            case R.id.display_local_image:
                 DisplaySingleImage.display(this, imageUrl, image);
                 break;
-            case R.id.btn_remove_image:
+            case R.id.delete_cache:
                 DeleteSingleImage.delete(this, imageUrl);
                 break;
         }
-
     }
+
 }

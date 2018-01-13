@@ -8,4 +8,72 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+    <style name="rl_title_public">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/margin_thirty_five</item>
+        <item name="android:layout_marginTop">@dimen/margin_ten</item>
+    </style>
+
+    <style name="rl_tv_title_view_vertical_line">
+        <item name="android:layout_marginLeft">@dimen/margin_five</item>
+        <item name="android:layout_width">3dp</item>
+        <item name="android:background">@color/md_orange_500</item>
+        <item name="android:layout_height">@dimen/margin_twenty</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+    <style name="view_horizontal_line">
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:background">@color/gray_shallow</item>
+        <item name="android:layout_height">@dimen/margin_zero_point_five</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="view_vertical_line">
+        <item name="android:background">@color/gray_shallow</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">@dimen/margin_zero_point_five</item>
+    </style>
+
+    <style name="rl_tv_title_public_main">
+        <item name="android:textSize">@dimen/text_size_fourteen</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginBottom">@dimen/margin_five</item>
+        <item name="android:layout_marginLeft">@dimen/margin_five</item>
+        <item name="android:textColor">@color/main_text_color</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+    <style name="tv_main">
+        <item name="android:textSize">@dimen/text_size_fourteen</item>
+        <item name="android:textColor">@color/main_text_color</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:lines">2</item>
+    </style>
+    <style name="tv_white">
+        <item name="android:textSize">@dimen/text_size_fourteen</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="linear_contain_public">
+        <item name="android:layout_height">@dimen/margin_eighty</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="linear_contain_public_rl">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">@dimen/margin_zero</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+
 </resources>

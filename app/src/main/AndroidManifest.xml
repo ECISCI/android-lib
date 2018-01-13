@@ -23,7 +23,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.Slide">
         <activity
-            android:name=".testui.MainAct"
+            android:name=".testui.MainHomeAct"
             android:theme="@style/ActivityThemeCrossPublicMaterial">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

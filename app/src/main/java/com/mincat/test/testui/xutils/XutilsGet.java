@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.mincat.sample.manager.get.BaseXutilsGet;
 import com.mincat.sample.utils.L;
@@ -14,12 +15,17 @@ import com.mincat.test.testui.Constant;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * @author Mings
  * @描述 Xutils Get网络访问测试
  */
 
 public class XutilsGet extends BaseXutilsGet {
+    @BindView(R.id.progress)
+    TextView progress;
     private String urlEncode;
     private Button btn_send;
     private EditText et_show_text;
@@ -32,6 +38,7 @@ public class XutilsGet extends BaseXutilsGet {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_test_xutils_get);
+        ButterKnife.bind(this);
         initView();
     }
 
@@ -55,6 +62,7 @@ public class XutilsGet extends BaseXutilsGet {
 
             case R.id.btn_send:
 
+                progress.setText("请求中...请稍后");
                 onNetRequest();
                 break;
         }
@@ -94,6 +102,8 @@ public class XutilsGet extends BaseXutilsGet {
     @Override
     public void onSuccessListener(String result, String sign) {
 
+        progress.setText("请求成功");
+
         if (sign.equals(requestSign)) {
 
             L.i(TAG, "Xutils Get 请求成功返回结果:" + result);
@@ -112,7 +122,7 @@ public class XutilsGet extends BaseXutilsGet {
 
     @Override
     public void onErrorListener(Throwable ex, boolean isOnCallback) {
-
+        progress.setText("请求失败");
         L.i(TAG, "Xutils Get 请求失败,错误信息:" + ex);
 
         et_show_text.setText(R.string.request_failed);

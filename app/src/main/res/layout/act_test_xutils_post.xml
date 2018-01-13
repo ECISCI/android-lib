@@ -34,6 +34,7 @@
     </android.support.v7.widget.Toolbar>
 
     <LinearLayout
+        android:id="@+id/rl_xutils_post"
         android:layout_width="match_parent"
         android:layout_height="@dimen/margin_three_hundred"
         android:background="@color/white"
@@ -52,6 +53,12 @@
             android:textSize="@dimen/text_size_sixteen" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/progress"
+        style="@style/tv_main"
+        android:layout_below="@id/rl_xutils_post"
+        android:layout_marginTop="@dimen/margin_ten" />
 
     <Button
         android:id="@+id/btn_send"

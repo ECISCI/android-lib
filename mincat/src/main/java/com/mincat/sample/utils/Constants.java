@@ -77,5 +77,17 @@ public class Constants {
 
     public static final String FILE_DIR_NAME = "thumb";
 
+    public static final String EXIT = "再按一次退出";
+
+    public static final int EXIT_CONTINUED = 1500;
+
+    public static final int ZERO = 0;
+
+    public static final String TAB_NAME_01 = "业务";
+
+    public static final String TAB_NAME_02 = "UI";
+
+    public static final String TAB_NAME_03 = "设置";
+
 
 }

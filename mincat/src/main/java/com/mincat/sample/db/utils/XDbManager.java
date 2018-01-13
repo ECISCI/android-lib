@@ -124,7 +124,13 @@ public class XDbManager {
             db = createDb();
             list = db.findAll(cls);
 
-            L.i(TAG, "查询" + cls + "表成功,返回结果:" + list);
+
+            if (list.size() == 0) {
+                L.i(TAG, "表中无数据");
+            } else {
+
+                L.i(TAG, "查询" + cls + "表成功,返回结果:" + list);
+            }
 
             return list;
 

@@ -61,7 +61,6 @@ public class XutilsUploadFile {
             public void onFinished() {
             }
 
-
         });
     }
 

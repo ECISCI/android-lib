@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_tab_items_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_tab_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawablePadding="@dimen/margin_two"
+        android:gravity="center"
+        android:textColor="@color/main_text_color"
+        android:textSize="@dimen/text_size_twelve" />
+
+    <TextView
+        android:id="@+id/tv_tab_items_num"
+        android:layout_width="@dimen/margin_twenty_two"
+        android:layout_height="@dimen/margin_eighteen"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/margin_fifteen"
+        android:layout_marginLeft="@dimen/margin_eighteen"
+        android:gravity="center"
+        android:text="10"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_twelve"
+        android:visibility="invisible"
+        tools:ignore="HardcodedText" />
+</FrameLayout>

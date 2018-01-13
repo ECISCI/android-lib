@@ -81,7 +81,7 @@ public class LineCharts {
 
 
         //折线的颜色
-        line = new Line(mPointValues).setColor(Color.RED).setCubic(false);
+        line = new Line(mPointValues).setColor(R.color.md_blue_200).setCubic(false);
         lines = new ArrayList<Line>();
 
         // 折线图上每个数据点的形状  这里是圆形 （有三种 ：ValueShape.SQUARE  ValueShape.CIRCLE  ValueShape.SQUARE）

@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Test</string>
+    <string name="sd_card_path"><![CDATA[*** 如果有SDCard缓存地址在/sdcard/Android/data/<application package>/cache/]]></string>
+    <string name="no_sdcard_path"><![CDATA[*** 如果没有SDCard缓存地址在/data/data/<application package>/cache/]]></string>
+    <string name="cache_describe">*** 请先读网络，然后断网测试读本地请使用文件管理器查看缓存内容,一般需要root手机后才能查看</string>
+    <string name="request_success">请求成功</string>
+    <string name="request_failed">请求失败</string>
+    <string name="in_requst">请求中...请稍后</string>
 
 </resources>

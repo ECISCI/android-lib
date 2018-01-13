@@ -61,7 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/public_high"
                 android:layout_margin="@dimen/margin_ten"
-                android:background="@drawable/corners_test_button"
+                android:background="@drawable/corners_bg_white"
                 android:text="添加数据到Person表"
                 android:textAllCaps="false"
                 android:textColor="@color/white" />
@@ -71,7 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/public_high"
                 android:layout_margin="@dimen/margin_ten"
-                android:background="@drawable/corners_test_button"
+                android:background="@drawable/corners_bg_white"
                 android:text="添加数据到Book表"
                 android:textAllCaps="false"
                 android:textColor="@color/white" />
@@ -81,7 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/public_high"
                 android:layout_margin="@dimen/margin_ten"
-                android:background="@drawable/corners_test_button"
+                android:background="@drawable/corners_bg_white"
                 android:text="查询Person表"
                 android:textAllCaps="false"
                 android:textColor="@color/white" />
@@ -91,7 +91,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/public_high"
                 android:layout_margin="@dimen/margin_ten"
-                android:background="@drawable/corners_test_button"
+                android:background="@drawable/corners_bg_white"
                 android:text="查询Book表"
                 android:textAllCaps="false"
                 android:textColor="@color/white" />
@@ -101,7 +101,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/public_high"
                 android:layout_margin="@dimen/margin_ten"
-                android:background="@drawable/corners_test_button"
+                android:background="@drawable/corners_bg_white"
                 android:text="删除Person表"
                 android:textAllCaps="false"
                 android:textColor="@color/white" />
@@ -111,7 +111,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/public_high"
                 android:layout_margin="@dimen/margin_ten"
-                android:background="@drawable/corners_test_button"
+                android:background="@drawable/corners_bg_white"
                 android:text="删除Book表"
                 android:textAllCaps="false"
                 android:textColor="@color/white" />

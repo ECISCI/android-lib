@@ -21,7 +21,7 @@
     <style name="AppCompat_toolbar">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/public_high</item>
-        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:background">@color/main</item>
     </style>
 
     <style name="AppCompat_toolbar_text">
@@ -37,7 +37,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/public_high</item>
         <item name="android:layout_alignParentBottom">true</item>
-        <item name="android:background">@drawable/corners_test_button</item>
+        <item name="android:background">@drawable/corners_bg_main</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">@dimen/text_size_sixteen</item>
         <item name="android:layout_margin">@dimen/margin_ten</item>

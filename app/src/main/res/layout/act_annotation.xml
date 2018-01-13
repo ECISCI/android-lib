@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
     <android.support.v7.widget.Toolbar
@@ -30,33 +31,24 @@
             android:src="@drawable/icon_refresh"
             android:visibility="gone" />
     </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:layout_margin="@dimen/margin_ten"
+        android:gravity="center"
+        android:textColor="@color/md_red_600"
+        android:layout_width="match_parent"
+        android:text="*** 页面的查找控件,增加点击事件均通过注解方式完成非常方便"
+        android:layout_height="wrap_content" />
     <Button
         android:id="@+id/click_01"
         android:layout_width="match_parent"
         android:layout_height="@dimen/public_high"
         android:layout_margin="@dimen/margin_ten"
-        android:background="@drawable/corners_test_button"
-        android:text="注解测试01"
+        android:background="@drawable/corners_bg_white"
+        android:text="注解点击测试"
         android:textAllCaps="false"
         android:textColor="@color/white" />
 
-    <Button
-        android:id="@+id/click_02"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/public_high"
-        android:layout_margin="@dimen/margin_ten"
-        android:background="@drawable/corners_test_button"
-        android:text="注解测试02"
-        android:textAllCaps="false"
-        android:textColor="@color/white" />
-    <Button
-        android:id="@+id/click_03"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/public_high"
-        android:layout_margin="@dimen/margin_ten"
-        android:background="@drawable/corners_test_button"
-        android:text="注解测试03"
-        android:textAllCaps="false"
-        android:textColor="@color/white" />
+
 
 </LinearLayout>

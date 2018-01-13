@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/realtabcontent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_zero"
+        android:layout_weight="1">
+
+    </FrameLayout>
+
+    <com.mincat.sample.manager.CustomTableHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_fifty"
+        android:background="@drawable/tab_bg">
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="@dimen/margin_zero"
+            android:layout_height="@dimen/margin_zero"
+            android:layout_weight="0" />
+
+    </com.mincat.sample.manager.CustomTableHost>
+
+
+</LinearLayout>

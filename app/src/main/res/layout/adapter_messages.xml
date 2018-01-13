@@ -26,7 +26,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/margin_ten"
-            android:background="@drawable/corners_test_button"
+            android:background="@drawable/corners_bg_white"
             android:text="删除条目"
             android:textColor="@color/white"
             android:textSize="@dimen/text_size_fourteen"
