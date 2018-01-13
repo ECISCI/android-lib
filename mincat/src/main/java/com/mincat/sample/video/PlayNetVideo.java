@@ -31,6 +31,10 @@ public class PlayNetVideo {
             Glide.with(context).load(imageUrl).into(player.thumbImageView);
         }
 
+        player.startFullscreen(context, JCVideoPlayerStandard.class, videoUrl, "");
+        //模拟用户点击开始按钮，NORMAL状态下点击开始播放视频，播放中点击暂停视频
+        player.startButton.performClick();
+
 
     }
 }

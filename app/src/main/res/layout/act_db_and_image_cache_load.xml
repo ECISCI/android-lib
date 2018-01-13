@@ -18,7 +18,7 @@
         <TextView
             android:id="@+id/title"
             style="@style/AppCompat_toolbar_text"
-            android:text="加载网络数据" />
+            android:text="缓存网络数据" />
 
         <Button
             android:id="@+id/refresh"

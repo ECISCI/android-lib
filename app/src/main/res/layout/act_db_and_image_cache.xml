@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray_shallow"
+    android:background="@color/white"
     android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
@@ -18,7 +18,7 @@
         <TextView
             android:id="@+id/title"
             style="@style/AppCompat_toolbar_text"
-            android:text="列表缓存" />
+            android:text="数据图片" />
 
         <Button
             android:id="@+id/refresh"
@@ -29,7 +29,6 @@
             android:layout_marginLeft="@dimen/margin_ten"
             android:layout_marginRight="@dimen/margin_ten"
             android:background="@null"
-            android:text="加载"
             android:visibility="gone" />
     </android.support.v7.widget.Toolbar>
 
@@ -63,35 +62,69 @@
         android:textColor="@color/md_red_600"
         android:textSize="@dimen/text_size_fourteen" />
 
-    <Button
-        android:id="@+id/read_net"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/public_high"
-        android:layout_margin="@dimen/margin_ten"
-        android:background="@drawable/corners_bg_white"
-        android:text="读网络"
-        android:textAllCaps="false"
-        android:textColor="@color/white" />
+    <RelativeLayout style="@style/rl_title_public">
 
-    <Button
-        android:id="@+id/read_local"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/public_high"
-        android:layout_margin="@dimen/margin_ten"
-        android:background="@drawable/corners_bg_white"
-        android:text="读本地"
-        android:textAllCaps="false"
-        android:textColor="@color/white" />
+        <View
+            android:id="@+id/vertical_line"
+            style="@style/rl_tv_title_view_vertical_line"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/margin_five" />
 
-    <Button
-        android:id="@+id/remove_all_cache"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/public_high"
-        android:layout_margin="@dimen/margin_ten"
-        android:background="@drawable/corners_bg_white"
-        android:text="删除全部缓存"
-        android:textAllCaps="false"
-        android:textColor="@color/white" />
+        <View style="@style/view_horizontal_line" />
+
+        <TextView
+            style="@style/rl_tv_title_public_main"
+            android:layout_toRightOf="@id/vertical_line"
+            android:text="缓存数据+图片( *** 请查看Log日志 )" />
+
+    </RelativeLayout>
+
+    <View style="@style/view_horizontal_line" />
+
+    <LinearLayout style="@style/linear_contain_public">
+
+        <RelativeLayout
+            android:id="@+id/write_cache"
+            style="@style/linear_contain_public_rl">
+
+            <TextView
+                style="@style/tv_main"
+                android:layout_centerInParent="true"
+                android:text="缓存" />
+        </RelativeLayout>
+
+        <View style="@style/view_vertical_line" />
+
+        <RelativeLayout
+            android:id="@+id/read_cache"
+            style="@style/linear_contain_public_rl">
+
+
+            <TextView
+                style="@style/tv_main"
+                android:layout_centerInParent="true"
+                android:text="查看缓存" />
+
+
+        </RelativeLayout>
+
+        <View style="@style/view_vertical_line" />
+
+        <RelativeLayout
+            android:id="@+id/delete_all"
+            style="@style/linear_contain_public_rl">
+
+            <TextView
+                style="@style/tv_main"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="删除全部缓存" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View style="@style/view_horizontal_line" />
 
 
 </LinearLayout>

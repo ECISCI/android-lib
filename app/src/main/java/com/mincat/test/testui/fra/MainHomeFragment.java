@@ -11,10 +11,12 @@ import com.mincat.sample.db.ben.Book;
 import com.mincat.sample.db.ben.Person;
 import com.mincat.sample.db.utils.XDbManager;
 import com.mincat.sample.imagecache.more.CacheMoreImage;
+import com.mincat.sample.imagecache.utils.DeleteAllImageCache;
 import com.mincat.sample.manager.BaseFragment;
 import com.mincat.sample.utils.L;
 import com.mincat.sample.utils.T;
 import com.mincat.test.R;
+import com.mincat.test.testui.DbAndImageCache;
 import com.mincat.test.testui.imagecache.CacheSingleImages;
 import com.mincat.test.testui.volley.VolleyGet;
 import com.mincat.test.testui.volley.VolleyPost;
@@ -183,11 +185,18 @@ public class MainHomeFragment extends BaseFragment implements SwipeRefreshLayout
             case R.id.cache_list:
                 intentUtils.openActivityFromRight(getActivity(), com.mincat.test.testui.imagecache.CacheMoreImage.class);
                 break;
+
+            // 进入缓存页面
             case R.id.db_cache_image:
+                intentUtils.openActivityFromRight(getActivity(), DbAndImageCache.class);
+
                 break;
             case R.id.delete_cache_single_image:
                 break;
+            // 删除全部缓存
             case R.id.delete_all:
+                DeleteAllImageCache.delete(getActivity());
+                XDbManager.deleteWhereTable(com.mincat.test.domain.Person.class);
                 break;
         }
     }

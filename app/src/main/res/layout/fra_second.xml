@@ -5,6 +5,21 @@
     android:background="@color/white"
     android:orientation="vertical">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/public_high"
+        android:background="@color/main">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="UI和视频"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_eighteen" />
+
+    </RelativeLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -73,6 +88,68 @@
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
                         android:text="饼状图" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View style="@style/view_horizontal_line" />
+
+            <RelativeLayout style="@style/rl_title_public">
+
+                <View
+                    android:id="@+id/rl_video_play"
+                    style="@style/rl_tv_title_view_vertical_line"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/margin_five" />
+
+                <View style="@style/view_horizontal_line" />
+
+                <TextView
+                    style="@style/rl_tv_title_public_main"
+                    android:layout_toRightOf="@id/rl_video_play"
+                    android:text="视频播放( *** 视频播放一定要在真机上做测试！！！)" />
+
+            </RelativeLayout>
+
+            <View style="@style/view_horizontal_line" />
+
+            <LinearLayout style="@style/linear_contain_public">
+
+                <RelativeLayout
+                    android:id="@+id/play_single_video"
+                    style="@style/linear_contain_public_rl">
+
+                    <TextView
+                        style="@style/tv_main"
+                        android:layout_centerInParent="true"
+                        android:text="单个视频" />
+                </RelativeLayout>
+
+                <View style="@style/view_vertical_line" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_play_list_video"
+                    style="@style/linear_contain_public_rl">
+
+
+                    <TextView
+                        style="@style/tv_main"
+                        android:layout_centerInParent="true"
+                        android:text="列表视频" />
+
+
+                </RelativeLayout>
+
+                <View style="@style/view_vertical_line" />
+
+                <RelativeLayout style="@style/linear_contain_public_rl">
+
+                    <TextView
+                        style="@style/tv_main"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="" />
 
                 </RelativeLayout>
 

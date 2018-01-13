@@ -108,6 +108,10 @@
             android:name=".testui.TestAnnotation"
             android:launchMode="singleTask"
             android:theme="@style/ActivityThemeCrossPublicMaterial" />
+        <activity
+            android:name=".testui.video.VideoList"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityThemeCrossPublicMaterial" />
     </application>
 
 </manifest>

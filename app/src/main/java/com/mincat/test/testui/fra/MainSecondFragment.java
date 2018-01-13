@@ -6,14 +6,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
-import com.mincat.sample.chart.ColumnCharts;
-import com.mincat.sample.chart.LineCharts;
-import com.mincat.sample.chart.PieCharts;
 import com.mincat.sample.manager.BaseFragment;
 import com.mincat.test.R;
 import com.mincat.test.testui.hellochart.HelloChartCircle;
 import com.mincat.test.testui.hellochart.HelloChartColumn;
 import com.mincat.test.testui.hellochart.HelloChartLine;
+import com.mincat.test.testui.video.VideoList;
+import com.mincat.test.testui.video.VideoPlay;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -33,6 +32,10 @@ public class MainSecondFragment extends BaseFragment {
     @BindView(R.id.circle_chart)
     RelativeLayout circleChart;
     Unbinder unbinder;
+    @BindView(R.id.play_single_video)
+    RelativeLayout playSingleVideo;
+    @BindView(R.id.rl_play_list_video)
+    RelativeLayout rlPlayListVideo;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -47,7 +50,7 @@ public class MainSecondFragment extends BaseFragment {
         unbinder.unbind();
     }
 
-    @OnClick({R.id.line_chart, R.id.column_chart, R.id.circle_chart})
+    @OnClick({R.id.line_chart, R.id.column_chart, R.id.circle_chart,R.id.play_single_video, R.id.rl_play_list_video})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.line_chart:
@@ -59,6 +62,13 @@ public class MainSecondFragment extends BaseFragment {
             case R.id.circle_chart:
                 intentUtils.openActivityFromRight(getActivity(), HelloChartCircle.class);
                 break;
+            case R.id.play_single_video:
+                intentUtils.openActivityFromRight(getActivity(), VideoPlay.class);
+                break;
+            case R.id.rl_play_list_video:
+                intentUtils.openActivityFromRight(getActivity(), VideoList.class);
+                break;
         }
     }
+
 }

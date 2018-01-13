@@ -10,6 +10,7 @@ import android.widget.ListView;
 import com.mincat.sample.manager.base.AppCompat;
 import com.mincat.test.R;
 import com.mincat.test.adapter.VideoAdapter;
+import com.mincat.test.testui.Constant;
 
 import java.util.ArrayList;
 
@@ -21,14 +22,18 @@ import fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard;
  */
 
 public class VideoList extends AppCompat {
-    private String videoUrl = "http://gslb.miaopai.com/stream/ed5HCfnhovu3tyIQAiv60Q__.mp4";
+    // 播放地址
+    private String videoUrl = Constant.VIDEO_NET_URL;
     private ListView listView;
+    // 播放Url地址集合
     private ArrayList<String> datas;
     private JCVideoPlayerStandard currPlayer;
     private VideoAdapter adapter;
     private AbsListView.OnScrollListener onScrollListener;
-    private int firstVisible;//当前第一个可见的item
-    private int visibleCount;//当前可见的item个数
+    //当前第一个可见的item
+    private int firstVisible;
+    //当前可见的item个数
+    private int visibleCount;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,6 +44,7 @@ public class VideoList extends AppCompat {
 
     @Override
     public void initView() {
+        initToolBar(R.id.toolbar);
         listView = (ListView) findViewById(R.id.listview);
         initDatas();
         initListener();
@@ -57,7 +63,7 @@ public class VideoList extends AppCompat {
 
     private void initDatas() {
         datas = new ArrayList<String>();
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 10; i++) {
             datas.add(videoUrl);
         }
         adapter = new VideoAdapter(VideoList.this, datas, R.layout.item_video);
@@ -111,8 +117,8 @@ public class VideoList extends AppCompat {
                 Rect rect = new Rect();
                 //获取当前view 的 位置
                 currPlayer.getLocalVisibleRect(rect);
-                int videoheight = currPlayer.getHeight();
-                if (rect.top == 0 && rect.bottom == videoheight) {
+                int videoHeight = currPlayer.getHeight();
+                if (rect.top == 0 && rect.bottom == videoHeight) {
                     if (currPlayer.currentState == JCVideoPlayer.CURRENT_STATE_NORMAL
                             || currPlayer.currentState == JCVideoPlayer.CURRENT_STATE_ERROR) {
                         currPlayer.startButton.performClick();

@@ -3,11 +3,11 @@ package com.mincat.test.testui;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
-import android.widget.Button;
+import android.widget.RelativeLayout;
 
 import com.mincat.sample.db.utils.XDbManager;
-import com.mincat.sample.imagecache.utils.DeleteAllImageCache;
 import com.mincat.sample.imagecache.more.CacheMoreImage;
+import com.mincat.sample.imagecache.utils.DeleteAllImageCache;
 import com.mincat.sample.manager.base.AppCompat;
 import com.mincat.sample.utils.L;
 import com.mincat.test.R;
@@ -18,6 +18,10 @@ import com.mincat.test.testui.imagecache.DbAndImageCacheLocal;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 /**
  * @author Ming
  * @描述 数据库缓存+图片缓存
@@ -25,15 +29,20 @@ import java.util.List;
 
 public class DbAndImageCache extends AppCompat {
 
-    private Button read_net, read_local, remove_all_cache;
+    @BindView(R.id.write_cache)
+    RelativeLayout writeCache;
+    @BindView(R.id.read_cache)
+    RelativeLayout readCache;
+    @BindView(R.id.delete_all)
+    RelativeLayout deleteAll;
     private List<Person> select_person;
-
     CacheMoreImage cache = CacheMoreImage.getInstance();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_db_and_image_cache);
+        ButterKnife.bind(this);
 
         initView();
     }
@@ -41,13 +50,6 @@ public class DbAndImageCache extends AppCompat {
     @Override
     public void initView() {
         initToolBar(R.id.toolbar);
-
-        read_net = getId(R.id.read_net);
-        read_net.setOnClickListener(this);
-        read_local = getId(R.id.read_local);
-        read_local.setOnClickListener(this);
-        remove_all_cache = getId(R.id.remove_all_cache);
-        remove_all_cache.setOnClickListener(this);
 
 
     }
@@ -59,40 +61,6 @@ public class DbAndImageCache extends AppCompat {
 
     @Override
     public void onClick(View view) {
-
-        switch (view.getId()) {
-
-            case R.id.read_net:
-                intentUtils.openActivityNormal(this, DbAndImageCacheLoad.class);
-
-                break;
-
-            case R.id.read_local:
-                intentUtils.openActivityNormal(this, DbAndImageCacheLocal.class);
-
-                break;
-            case R.id.remove_all_cache:
-
-
-                DeleteAllImageCache.delete(this);
-                XDbManager.deleteWhereTable(Person.class);
-
-
-                L.i(TAG, "删除所有数据后:" + selectTablePerson());
-
-                break;
-        }
-
-    }
-
-    private void removeAll() {
-
-
-
-        XDbManager.deleteWhereTable(Person.class);
-
-
-        L.i(TAG, "删除所有数据后:" + selectTablePerson());
 
 
     }
@@ -110,4 +78,24 @@ public class DbAndImageCache extends AppCompat {
 
     }
 
+    @OnClick({R.id.write_cache, R.id.read_cache, R.id.delete_all})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+
+            // 加载网络数据 并缓存到本地,此页面打开一次向数据库中添加一次
+            case R.id.write_cache:
+                intentUtils.openActivityNormal(this, DbAndImageCacheLoad.class);
+                break;
+            // 读取本地缓存
+            case R.id.read_cache:
+                intentUtils.openActivityNormal(this, DbAndImageCacheLocal.class);
+                break;
+            // 删除全部缓存
+            case R.id.delete_all:
+                DeleteAllImageCache.delete(this);
+                XDbManager.deleteWhereTable(Person.class);
+                L.i(TAG, "删除所有数据后:" + selectTablePerson());
+                break;
+        }
+    }
 }
