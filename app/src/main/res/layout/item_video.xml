@@ -17,6 +17,7 @@
         android:paddingTop="8dp">
 
         <ImageView
+            android:visibility="gone"
             android:id="@+id/img_video_icon"
             android:layout_width="30dp"
             android:layout_height="30dp"
@@ -30,7 +31,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="12dp"
             android:layout_toRightOf="@id/img_video_icon"
-            android:text="播放列表" />
+            android:text="盗墓笔记" />
 
         <TextView
             android:id="@+id/tv_video_comment"
@@ -49,6 +50,6 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="12dp"
             android:layout_toLeftOf="@id/tv_video_comment"
-            android:text="3万次播放" />
+            android:text="作者 : 南派三叔" />
     </RelativeLayout>
 </LinearLayout>
