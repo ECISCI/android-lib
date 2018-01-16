@@ -72,6 +72,7 @@
     <style name="linear_contain_public_rl">
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_width">@dimen/margin_zero</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
         <item name="android:layout_weight">1</item>
     </style>
 
