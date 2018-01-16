@@ -1,4 +1,4 @@
-package com.mincat.test.adapter;
+package com.mincat.test.adapter.video;
 
 import android.content.Context;
 

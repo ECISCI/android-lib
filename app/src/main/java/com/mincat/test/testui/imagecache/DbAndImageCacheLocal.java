@@ -11,7 +11,7 @@ import com.mincat.sample.db.utils.XDbManager;
 import com.mincat.sample.manager.base.AppCompat;
 import com.mincat.sample.utils.L;
 import com.mincat.test.R;
-import com.mincat.test.adapter.ImageAndDbLocalAdapter;
+import com.mincat.test.adapter.imageCache.ImageAndDbLocalAdapter;
 import com.mincat.test.domain.Person;
 
 import java.util.ArrayList;

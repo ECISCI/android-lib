@@ -1,4 +1,4 @@
-package com.mincat.test.testui;
+package com.mincat.test.testui.main;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

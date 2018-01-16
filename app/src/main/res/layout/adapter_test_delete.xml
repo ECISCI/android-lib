@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_one_hundred"
+    android:layout_marginBottom="@dimen/margin_ten"
+    android:layout_marginLeft="@dimen/margin_ten"
+    android:layout_marginRight="@dimen/margin_ten"
+    android:background="@drawable/corners_bg_white"
+    android:layout_marginTop="@dimen/margin_ten"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/corners_bg_white"
+        android:layout_height="@dimen/margin_one_hundred">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/margin_sixty"
+            android:layout_height="@dimen/margin_sixty"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_ten"
+            android:background="@drawable/message_01" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_twenty"
+            android:layout_toRightOf="@id/image"
+            android:text="世界这么大我想去看看"
+            android:lines="2"
+            android:textColor="@color/md_orange_500"
+            android:textSize="@dimen/text_size_thirteen" />
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_twenty_five"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/margin_five"
+            android:layout_marginRight="@dimen/margin_five"
+            android:background="@null"
+            android:text="删除"
+            android:textColor="@color/main"
+            android:textSize="@dimen/text_size_fourteen" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

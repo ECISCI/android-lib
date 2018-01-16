@@ -1,4 +1,4 @@
-package com.mincat.test.adapter;
+package com.mincat.test.adapter.imageCache;
 
 import android.app.Activity;
 import android.support.v7.widget.RecyclerView;

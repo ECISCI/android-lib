@@ -10,7 +10,7 @@ import android.view.View;
 import com.mincat.sample.db.utils.XDbManager;
 import com.mincat.sample.manager.base.AppCompat;
 import com.mincat.test.R;
-import com.mincat.test.adapter.ImageAndDbLoadAdapter;
+import com.mincat.test.adapter.imageCache.ImageAndDbLoadAdapter;
 import com.mincat.test.domain.Person;
 import com.mincat.test.testui.Constant;
 

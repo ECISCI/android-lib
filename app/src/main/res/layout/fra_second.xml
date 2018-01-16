@@ -157,6 +157,68 @@
 
             <View style="@style/view_horizontal_line" />
 
+            <RelativeLayout style="@style/rl_title_public">
+
+                <View
+                    android:id="@+id/rl_operation_adapter"
+                    style="@style/rl_tv_title_view_vertical_line"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/margin_five" />
+
+                <View style="@style/view_horizontal_line" />
+
+                <TextView
+                    style="@style/rl_tv_title_public_main"
+                    android:layout_toRightOf="@id/rl_operation_adapter"
+                    android:text="操作adapter条目" />
+
+            </RelativeLayout>
+
+            <View style="@style/view_horizontal_line" />
+
+            <LinearLayout style="@style/linear_contain_public">
+
+                <RelativeLayout
+                    android:id="@+id/adapter_delete_item"
+                    style="@style/linear_contain_public_rl">
+
+                    <TextView
+                        style="@style/tv_main"
+                        android:layout_centerInParent="true"
+                        android:text="删除条目" />
+                </RelativeLayout>
+
+                <View style="@style/view_vertical_line" />
+
+                <RelativeLayout
+                    android:id="@+id/add_click_listener"
+                    style="@style/linear_contain_public_rl">
+
+
+                    <TextView
+                        style="@style/tv_main"
+                        android:layout_centerInParent="true"
+                        android:text="点击事件" />
+
+
+                </RelativeLayout>
+
+                <View style="@style/view_vertical_line" />
+
+                <RelativeLayout style="@style/linear_contain_public_rl">
+
+                    <TextView
+                        style="@style/tv_main"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View style="@style/view_horizontal_line" />
+
 
         </LinearLayout>
 

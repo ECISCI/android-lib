@@ -120,45 +120,6 @@ public class OperationAdapterDialog {
 
     }
 
-    /**
-     * @param activity   当前类
-     * @param parseColor 标题颜色
-     * @param titleName  标题名
-     * @param position   adapter中的位置
-     * @param lists      加载数据的List集合
-     * @param adapter    加载的adapter
-     * @param btn        需要做操作的Button对象
-     * @描述 取消订单
-     */
-    public void recycleViewCancelItem(final Activity activity,
-                                      String parseColor,
-                                      String titleName,
-                                      final int position,
-                                      final List<?> lists,
-                                      final RecyclerView.Adapter adapter,
-                                      final Button btn,
-                                      final String btn_state) {
-
-        initialization(activity, parseColor, titleName);
-
-        confirm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                btn.setText(btn_state);
-                btn.setTextColor(Color.parseColor("#A9A9A9"));
-
-                dialog.dismiss();
-            }
-        });
-
-        cancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-            }
-        });
-    }
 
 
     /**

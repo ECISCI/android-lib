@@ -27,6 +27,7 @@ import java.lang.ref.WeakReference;
 
 /**
  * @author Ming
+ * @描述 这才是主页面
  */
 public class MainHomeAct extends AppCompatUnifiedManager {
 

@@ -9,7 +9,7 @@ import android.widget.ListView;
 
 import com.mincat.sample.manager.base.AppCompat;
 import com.mincat.test.R;
-import com.mincat.test.adapter.VideoAdapter;
+import com.mincat.test.adapter.video.VideoAdapter;
 import com.mincat.test.testui.Constant;
 
 import java.util.ArrayList;

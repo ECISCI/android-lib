@@ -1,4 +1,4 @@
-package com.mincat.test.testui;
+package com.mincat.test.testui.main;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,11 +7,16 @@ import android.widget.Button;
 
 import com.mincat.sample.manager.base.AppCompat;
 import com.mincat.test.R;
+import com.mincat.test.testui.DbAndImageCache;
+import com.mincat.test.testui.TestAnnotation;
 import com.mincat.test.testui.db.Database;
+import com.mincat.test.testui.main.ChartsAct;
+import com.mincat.test.testui.main.ImageCacheAct;
+import com.mincat.test.testui.main.NetAct;
+import com.mincat.test.testui.main.VideoAct;
 
 /**
  * @author Ming
- * @描述 主页面
  */
 public class MainAct extends AppCompat {
 

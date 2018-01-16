@@ -1,11 +1,10 @@
-package com.mincat.test.adapter;
+package com.mincat.test.adapter.imageCache;
 
 import android.app.Activity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,9 +17,10 @@ import java.util.List;
 
 /**
  * @author Ming
+ * @描述 读取本地数据并加载adapter 对应DbAndImageCacheLocal类
  */
 
-public class ImageAndDbAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class ImageAndDbLocalAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
 
     // 需要传入Recycle 保证图片加载Tag不错位
@@ -32,7 +32,7 @@ public class ImageAndDbAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     private CacheMoreImage cacheMoreImage = CacheMoreImage.getInstance();
     private OperationAdapterDialog dialog = OperationAdapterDialog.getInstance();
 
-    public ImageAndDbAdapter(Activity activity, List<?> lists, RecyclerView recyclerView) {
+    public ImageAndDbLocalAdapter(Activity activity, List<?> lists, RecyclerView recyclerView) {
         this.activity = activity;
         this.lists = lists;
         this.recyclerView = recyclerView;

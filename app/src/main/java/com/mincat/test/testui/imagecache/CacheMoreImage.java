@@ -9,7 +9,7 @@ import android.view.View;
 
 import com.mincat.sample.manager.base.AppCompat;
 import com.mincat.test.R;
-import com.mincat.test.adapter.ImageAdapter;
+import com.mincat.test.adapter.imageCache.ImageAdapter;
 import com.mincat.test.testui.Constant;
 
 import java.util.ArrayList;

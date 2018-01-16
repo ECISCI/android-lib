@@ -7,7 +7,9 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
 import com.mincat.sample.manager.BaseFragment;
+import com.mincat.sample.utils.T;
 import com.mincat.test.R;
+import com.mincat.test.testui.TestOperationAdapterAct;
 import com.mincat.test.testui.hellochart.HelloChartCircle;
 import com.mincat.test.testui.hellochart.HelloChartColumn;
 import com.mincat.test.testui.hellochart.HelloChartLine;
@@ -36,6 +38,10 @@ public class MainSecondFragment extends BaseFragment {
     RelativeLayout playSingleVideo;
     @BindView(R.id.rl_play_list_video)
     RelativeLayout rlPlayListVideo;
+    @BindView(R.id.adapter_delete_item)
+    RelativeLayout adapterDeleteItem;
+    @BindView(R.id.add_click_listener)
+    RelativeLayout addClickListener;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -50,7 +56,7 @@ public class MainSecondFragment extends BaseFragment {
         unbinder.unbind();
     }
 
-    @OnClick({R.id.line_chart, R.id.column_chart, R.id.circle_chart,R.id.play_single_video, R.id.rl_play_list_video})
+    @OnClick({R.id.line_chart, R.id.column_chart, R.id.circle_chart, R.id.play_single_video, R.id.rl_play_list_video, R.id.adapter_delete_item, R.id.add_click_listener})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.line_chart:
@@ -67,6 +73,12 @@ public class MainSecondFragment extends BaseFragment {
                 break;
             case R.id.rl_play_list_video:
                 intentUtils.openActivityFromRight(getActivity(), VideoList.class);
+                break;
+            case R.id.adapter_delete_item:
+                intentUtils.openActivityFromRight(getActivity(), TestOperationAdapterAct.class);
+                break;
+            case R.id.add_click_listener:
+                T.showShort(getActivity(), "暂未测试");
                 break;
         }
     }
