@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.mincat.sample.imagecache.more.CacheMoreImage;
 import com.mincat.sample.operationadapter.OperationAdapterDialog;
 import com.mincat.test.R;
-import com.mincat.test.domain.Person;
+import com.mincat.test.domain.db.Person;
 
 import java.util.List;
 

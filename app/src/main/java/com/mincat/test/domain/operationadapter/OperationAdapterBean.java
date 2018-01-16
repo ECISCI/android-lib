@@ -1,4 +1,4 @@
-package com.mincat.test.domain;
+package com.mincat.test.domain.operationadapter;
 
 /**
  * @author Ming

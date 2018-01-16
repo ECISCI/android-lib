@@ -11,7 +11,7 @@ import com.mincat.sample.imagecache.utils.DeleteAllImageCache;
 import com.mincat.sample.manager.base.AppCompat;
 import com.mincat.sample.utils.L;
 import com.mincat.test.R;
-import com.mincat.test.domain.Person;
+import com.mincat.test.domain.db.Person;
 import com.mincat.test.testui.imagecache.DbAndImageCacheLoad;
 import com.mincat.test.testui.imagecache.DbAndImageCacheLocal;
 

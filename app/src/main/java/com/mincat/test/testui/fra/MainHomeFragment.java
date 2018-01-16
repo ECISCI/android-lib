@@ -10,7 +10,6 @@ import android.widget.RelativeLayout;
 import com.mincat.sample.db.ben.Book;
 import com.mincat.sample.db.ben.Person;
 import com.mincat.sample.db.utils.XDbManager;
-import com.mincat.sample.imagecache.more.CacheMoreImage;
 import com.mincat.sample.imagecache.utils.DeleteAllImageCache;
 import com.mincat.sample.manager.BaseFragment;
 import com.mincat.sample.utils.L;
@@ -196,7 +195,7 @@ public class MainHomeFragment extends BaseFragment implements SwipeRefreshLayout
             // 删除全部缓存
             case R.id.delete_all:
                 DeleteAllImageCache.delete(getActivity());
-                XDbManager.deleteWhereTable(com.mincat.test.domain.Person.class);
+                XDbManager.deleteWhereTable(com.mincat.test.domain.db.Person.class);
                 break;
         }
     }

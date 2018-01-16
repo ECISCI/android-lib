@@ -1,4 +1,4 @@
-package com.mincat.test.domain;
+package com.mincat.test.domain.db;
 
 import org.xutils.db.annotation.Column;
 import org.xutils.db.annotation.Table;

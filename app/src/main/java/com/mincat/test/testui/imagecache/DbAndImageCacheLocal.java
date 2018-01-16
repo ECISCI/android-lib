@@ -12,7 +12,7 @@ import com.mincat.sample.manager.base.AppCompat;
 import com.mincat.sample.utils.L;
 import com.mincat.test.R;
 import com.mincat.test.adapter.imageCache.ImageAndDbLocalAdapter;
-import com.mincat.test.domain.Person;
+import com.mincat.test.domain.db.Person;
 
 import java.util.ArrayList;
 import java.util.List;

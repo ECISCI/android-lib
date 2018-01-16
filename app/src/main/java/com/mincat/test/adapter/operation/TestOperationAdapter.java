@@ -16,7 +16,7 @@ import com.mincat.sample.operationadapter.OperationAdapterDialog;
 import com.mincat.sample.operationadapter.RemoveItemCallBack;
 import com.mincat.sample.utils.T;
 import com.mincat.test.R;
-import com.mincat.test.domain.OperationAdapterBean;
+import com.mincat.test.domain.operationadapter.OperationAdapterBean;
 
 import java.util.List;
 

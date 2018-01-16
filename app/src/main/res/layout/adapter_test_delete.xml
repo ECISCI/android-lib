@@ -16,8 +16,8 @@
 
         <ImageView
             android:id="@+id/image"
-            android:layout_width="@dimen/margin_sixty"
-            android:layout_height="@dimen/margin_sixty"
+            android:layout_width="@dimen/public_forty"
+            android:layout_height="@dimen/public_forty"
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/margin_ten"
             android:background="@drawable/message_01" />
