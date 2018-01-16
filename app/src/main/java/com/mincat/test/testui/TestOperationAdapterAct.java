@@ -61,7 +61,7 @@ public class TestOperationAdapterAct extends AppCompat implements SwipeRefreshLa
 
         bean1 = new OperationAdapterBean("世界那么大我想去看看");
         bean2 = new OperationAdapterBean("世界不止眼前的苟且,还有诗和远方");
-        bean3 = new OperationAdapterBean("怀揣一颗红心,续作两手准备");
+        bean3 = new OperationAdapterBean("怀揣一颗红心,需做两手准备");
         bean4 = new OperationAdapterBean("胡司令！看在党国的份上,快拉兄弟一把");
         bean5 = new OperationAdapterBean("沧海桑田方显英雄本色！");
 
