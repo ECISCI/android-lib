@@ -1,5 +1,6 @@
 package com.mincat.test.testui;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -10,6 +11,7 @@ import android.widget.Button;
 
 import com.mincat.sample.manager.base.AppCompat;
 import com.mincat.sample.operationadapter.OperationAdapterDialog;
+import com.mincat.sample.operationadapter.RemoveAllItemCallBack;
 import com.mincat.sample.utils.T;
 import com.mincat.test.R;
 import com.mincat.test.adapter.operation.TestOperationAdapter;
@@ -70,6 +72,10 @@ public class TestOperationAdapterAct extends AppCompat implements SwipeRefreshLa
         lists.add(bean3);
         lists.add(bean4);
         lists.add(bean5);
+
+        if (lists != null) {
+            refresh.setVisibility(View.VISIBLE);
+        }
 
         initAdapterData();
 
@@ -134,9 +140,23 @@ public class TestOperationAdapterAct extends AppCompat implements SwipeRefreshLa
 
         if (lists.size() == 0) {
 
-            T.showShort(getApplicationContext(), "没有要清空的数据");
+            T.showShort(getApplicationContext(), "没有要清空的数据了！");
         } else {
-            operationAdapterDialog.removeAllItemInAdapter(lists, adapter);
+            operationAdapterDialog.emptyAdapter(this, "#676767", "是否要清空全部条目？", lists, adapter, new RemoveAllItemCallBack() {
+                @Override
+                public void removeAllItemSuccess(List<?> lists, RecyclerView.Adapter adapter, AlertDialog dialog) {
+                    operationAdapterDialog.removeAllItemInAdapter(lists, adapter);
+                    dialog.dismiss();
+                    T.showShort(getApplicationContext(), "列表已清空");
+                    refresh.setVisibility(View.GONE);
+                }
+
+                @Override
+                public void removeAllItemCancel(AlertDialog dialog) {
+                    dialog.dismiss();
+
+                }
+            });
         }
     }
 }

@@ -3,7 +3,7 @@
     <!--文本文字大小-->
     <dimen name="text_size_nine">9sp</dimen>
     <dimen name="text_size_twelve">12sp</dimen>
-    <dimen name="text_size_thirteen">12sp</dimen>
+    <dimen name="text_size_thirteen">13sp</dimen>
     <dimen name="text_size_fourteen">14sp</dimen>
     <dimen name="text_size_sixteen">16sp</dimen>
     <dimen name="text_size_eighteen">18sp</dimen>

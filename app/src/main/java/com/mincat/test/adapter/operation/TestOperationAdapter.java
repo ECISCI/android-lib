@@ -132,7 +132,7 @@ public class TestOperationAdapter extends BaseRecyclerAdapter {
             btn_delete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    operationAdapterDialog.recycleViewRemoveItem(activity, "#676767", "确定删除当前条目?", position, lists, TestOperationAdapter.this, new RemoveItemCallBack() {
+                    operationAdapterDialog.recycleViewRemoveItem(activity, "#676767", "确定删除位置为" + "  " + position + "  的条目" + "?", position, lists, TestOperationAdapter.this, new RemoveItemCallBack() {
                         @Override
                         public void removeItemSuccess(int position, List<?> lists, RecyclerView.Adapter adapter, AlertDialog dialog) {
                             operationAdapterDialog.removeItemInAdapter(position, lists, adapter);
@@ -150,20 +150,6 @@ public class TestOperationAdapter extends BaseRecyclerAdapter {
 
                 }
             });
-
-            if (position == 0) {
-                image.setBackgroundResource(R.drawable.message_01);
-            } else if (position == 1) {
-                image.setBackgroundResource(R.drawable.message_02);
-            } else if (position == 2) {
-                image.setBackgroundResource(R.drawable.message_03);
-            } else if (position == 3) {
-                image.setBackgroundResource(R.drawable.message_04);
-            } else if (position == 4) {
-                image.setBackgroundResource(R.drawable.message_05);
-            }
-
-
         }
 
     }
